@@ -27,3 +27,4 @@ print([i for i in list if i < 5])
 # extras 3
 number = int(input("please enter your number: "))
 print([i for i in list if i < number])
+
