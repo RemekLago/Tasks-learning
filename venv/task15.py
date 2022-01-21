@@ -21,5 +21,4 @@ def rewerse2():
     a1.reverse()
     print(a1)
 
-
 rewerse2()
