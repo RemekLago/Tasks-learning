@@ -25,12 +25,12 @@ else:
 find1(number)
 """
 
-#solution2
+#solution2 - unfinished
+
 
 def search_number(target, array):
     n = len(list1)  # right
     left = 0
-    index = 0
 
     while left < n:
         index = (left + n) // 2
@@ -41,7 +41,7 @@ def search_number(target, array):
                 left = index + 1
             else:
                 n = index
-
+    return index
 
 index = search_number(number, list1)
 print(index)
