@@ -4,4 +4,15 @@ The function decides whether or not the given number is inside the list and retu
 Extras:
     Use binary search.
 """
-list = [1, 3, 5, 9, 13, 15, 18, 23, 27,  30, 35, 42, 43, 50]
+list = [1, 3, 5, 9, 13, 15, 18, 23, 27, 30, 35, 42, 43, 50]
+
+# solution1
+def find1(number):
+    for i in list:
+        if i == number:
+            return True
+            break
+        else:
+            return False
+
+find1(13)
