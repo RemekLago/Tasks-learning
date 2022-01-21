@@ -5,6 +5,7 @@ Extras:
     Use binary search.
 """
 list = [1, 3, 5, 9, 13, 15, 18, 23, 27, 30, 35, 42, 43, 50]
+number = int(input("Enter your number to check: "))
 
 # solution1
 def find1(number):
@@ -15,4 +16,9 @@ def find1(number):
         else:
             return False
 
-find1(13)
+if find1(number) == True:
+    print("Is in list")
+else:
+    print("Is not in list")
+
+find1(number)
