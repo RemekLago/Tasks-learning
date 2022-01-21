@@ -4,7 +4,4 @@ The function decides whether or not the given number is inside the list and retu
 Extras:
     Use binary search.
 """
-import random
-
-list = [i for i in range(1, 13)]
-print(list)
+list = [1, 3, 5, 9, 13, 15, 18, 23, 27,  30, 35, 42, 43, 50]
