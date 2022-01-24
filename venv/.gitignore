@@ -2,3 +2,4 @@
 .idea/
 mydjangosite/.idea/
 .env
+/venv/
