@@ -9,42 +9,38 @@ Extra:
 import string
 import random
 
-#length = input("How long your password should be: ")
-
-myDict = ["1", "2", "3", "4", "5"]
-mySeparator = ""
-
-z = mySeparator.join(myDict)
-
-#print(z)
-
 
 # string.digits[0:10])          random digit 0-9
 # string.ascii_lowercase)       random lower letter a-z
 # string.ascii_uppercase)       random upper letter A-Z
 # string.printable[-38:-1])     random special character !@#
 
-def create_password(length):
-    password = []
-    i = 1
-    a = 0
-    while i <= length:
-        a = str(random_choice_of_base())
-        print(f":draw by lot {random_choice_of_base()}")
-        if a == "base1":
 
+def final_password():
+    length = int(input("How long your password should be: "))
+    temporary_password(length)
+    separator = ""
+    final_pass = separator.join(temporary_password(length))
+    print(f"Proposition of your password is: {final_pass}")
+
+
+def temporary_password(length):
+    password = []
+    for i in range(0, length):
+        print(i)
+        a = str(random_choice_of_base())
+        if a == "base1":
             password.append(random_digit())
         elif a == "base2":
-
             password.append(random_lower_letter())
         elif a == "base3":
-
             password.append(random_upper_letter())
         elif a == "base4":
-
             password.append(random_special_character())
         i += 1
-    print(password)
+        print(i)                                          # only for test
+        print(f"draw by lot: {random_choice_of_base()}")  # only for test
+    return password
 
 def random_choice_of_base():
     base1 = random_digit()
@@ -54,7 +50,6 @@ def random_choice_of_base():
     base = ["base1", "base2", "base3", "base4"]
     choice = random.choice(base)
     return choice
-
 
 def random_digit():
     base = string.digits[0:10]
@@ -76,4 +71,4 @@ def random_special_character():
     x = random.choice(base)
     return x
 
-create_password(5)
+final_password()
