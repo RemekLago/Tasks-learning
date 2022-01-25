@@ -14,9 +14,9 @@ import random
 myDict = ["1", "2", "3", "4", "5"]
 mySeparator = ""
 
-x = mySeparator.join(myDict)
+z = mySeparator.join(myDict)
 
-#print(x)
+#print(z)
 
 
 # string.digits[0:10])          random digit 0-9
@@ -26,22 +26,23 @@ x = mySeparator.join(myDict)
 
 def create_password(length):
     password = []
-    i = 0
+    i = 1
+    a = 0
     while i <= length:
-        random_choice_of_base()
-        print(f"wylosowany: {random_choice_of_base()}")
-        if random_choice_of_base() == base1:
-            random_digit()
-            password.append(x)
-        elif random_choice_of_base() == base2:
-            random_lower_letter()
-            password.append(x)
-        elif random_choice_of_base() == base3:
-            random_upper_letter()
-            password.append(x)
-        elif random_choice_of_base() == base4:
-            random_special_character()
-            password.append(x)
+        a = str(random_choice_of_base())
+        print(f":draw by lot {random_choice_of_base()}")
+        if a == "base1":
+
+            password.append(random_digit())
+        elif a == "base2":
+
+            password.append(random_lower_letter())
+        elif a == "base3":
+
+            password.append(random_upper_letter())
+        elif a == "base4":
+
+            password.append(random_special_character())
         i += 1
     print(password)
 
@@ -52,26 +53,27 @@ def random_choice_of_base():
     base4 = random_special_character()
     base = ["base1", "base2", "base3", "base4"]
     choice = random.choice(base)
-    print(choice)
+    return choice
+
 
 def random_digit():
     base = string.digits[0:10]
-    y = random.choice(base)
-    return(y)
+    x = random.choice(base)
+    return x
 
 def random_lower_letter():
     base = string.ascii_lowercase
     x = random.choice(base)
-    return(x)
+    return x
 
 def random_upper_letter():
     base = string.ascii_uppercase
     x = random.choice(base)
-    return(x)
+    return x
 
 def random_special_character():
     base = string.printable[-38:-1]
     x = random.choice(base)
-    return(x)
+    return x
 
 create_password(5)
