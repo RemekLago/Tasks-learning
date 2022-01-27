@@ -16,7 +16,6 @@ import random
 
 def final_password():
     length = int(input("How long your password should be: "))
-    temporary_password(length)
     separator = ""
     final_pass = separator.join(temporary_password(length))
     print(f"Proposition of your password is: {final_pass}")
@@ -27,6 +26,7 @@ def temporary_password(length):
     for i in range(0, length):
         print(i)
         a = str(random_choice_of_base())
+        print(a)
         if a == "base1":
             password.append(random_digit())
         elif a == "base2":
@@ -37,7 +37,8 @@ def temporary_password(length):
             password.append(random_special_character())
         i += 1
         print(i)                                          # only for test
-        print(f"draw by lot: {random_choice_of_base()}")  # only for test
+        print(f"draw by lot: {a}")  # only for test
+        print(password)
     return password
 
 def random_choice_of_base():
