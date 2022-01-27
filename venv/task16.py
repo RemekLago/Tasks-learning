@@ -3,12 +3,10 @@ Be creative with how you generate passwords - strong passwords have a mix of low
 uppercase letters, numbers, and symbols.
 The passwords should be random, generating a new password every time the user asks for a new password.
 Include your run-time code in a main method.
-Extra:
-1. Ask the user how strong they want their password to be. For weak passwords, pick a word or two from a list.
 """
+
 import string
 import random
-
 
 # string.digits[0:10])          random digit 0-9
 # string.ascii_lowercase)       random lower letter a-z
