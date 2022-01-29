@@ -49,7 +49,16 @@ def is_in_number(number_1_list,number_2_list):
     print(f"You hit: {len(result)-result.count('X')} numbers are on the right place {result} and {bull} numbers are not at the correct place")
     print(f"cow = {cow}")
     print(f"bull = {bull}")
+    extra_hits()
+
+def extra_hits():
+    x = input("Do you want to take another chance? Y/N...")
+    if x == "Y" or x == "y":
+        input("Please enter your number again")
+        #...
+    elif x == "N" or x == "n":
+        print("Thank you for your game")
+    else:
+        print("Please write: Y or N")
 
 is_in_number(['1', '2', '3', '4'], ['6', '2', '3', '1'])
-
-
