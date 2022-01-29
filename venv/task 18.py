@@ -14,45 +14,42 @@ bull = 0
 def game(x,y):
     is_in_number(x,y)
 
-def split_numbers(x,y):
-    list3 = []
-    list4 = []
-    for i in x:
-        list3.append(i)
-    print(list3)
-    list4 = []
-    for j in y:
-        list4.append(j)
-    print(list4)
-    return list3
-    return list4
+def split_numbers(number_1,number_2): # it works correctly
+    number_1_list = []
+    number_2_list = []
+    for i in number_1:
+        number_1_list.append(i)
+    print(number_1_list) # for check
+    for j in number_2:
+        number_2_list.append(j)
+    print(number_2_list) # for check
+    return number_1_list, number_2_list
 
 
-def is_in_number(x,y):
-    split_numbers(x, y)
-    list1 = list3
-    list2 = list4
-    print(list1)
-    print(list2)
-        if list2[0] == list1[0]:
-            cow += 1
-        elif list2[0] == list[1] or list2[0] == list[2] or list2[0] == list[3]:
-            bull += 1
-        elif list2[1] == list1[1]:
-            cow += 1
-        elif list2[1] == list[0] or list2[1] == list[2] or list2[1] == list[3]:
-            bull += 1
-        elif list2[2] == list1[2]:
-            cow += 1
-        elif list2[2] == list[0] or list2[2] == list[1] or list2[2] == list[3]:
-            bull += 1
-        elif list2[3] == list1[3]:
-            cow += 1
-        elif list2[3] == list[0] or list2[3] == list[1] or list2[3] == list[2]:
-            bull += 1
-        print(cow)
-        print(bull)
+def is_in_number(number_1_list,number_2_list):
+    list2 = number_2_list
+    list1 = number_1_list
+    if list2[0] == list1[0]:
+        cow += 1
+    elif list2[0] == list[1] or list2[0] == list[2] or list2[0] == list[3]:
+        bull += 1
+    elif list2[1] == list1[1]:
+        cow += 1
+    elif list2[1] == list[0] or list2[1] == list[2] or list2[1] == list[3]:
+        bull += 1
+    elif list2[2] == list1[2]:
+        cow += 1
+    elif list2[2] == list[0] or list2[2] == list[1] or list2[2] == list[3]:
+        bull += 1
+    elif list2[3] == list1[3]:
+        cow += 1
+    elif list2[3] == list[0] or list2[3] == list[1] or list2[3] == list[2]:
+        bull += 1
+    print(cow)
+    print(bull)
 
-game("1234", "4567")
+#game("1234", "4567")
+
+
 
 
