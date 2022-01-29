@@ -8,10 +8,11 @@ import random
 
 random_4digit = str(random.randint(1000, 9999))
 user_number = str(1234)
-cow = 0
-bull = 0
 
+
+"""
 def game(x,y):
+    split_numbers(x, y)
     is_in_number(x,y)
 
 def split_numbers(number_1,number_2): # it works correctly
@@ -25,31 +26,30 @@ def split_numbers(number_1,number_2): # it works correctly
     print(number_2_list) # for check
     return number_1_list, number_2_list
 
+# nie wiem jak pobrać dane ze zwróconej tupli (number_1_list, number_2_list)
+"""
+#number_1_list = ['1', '2', '3', '4']
+#number_2_list = ['6', '2', '3', '1']
 
 def is_in_number(number_1_list,number_2_list):
+    cow = 0
+    bull = 0
     list2 = number_2_list
     list1 = number_1_list
-    if list2[0] == list1[0]:
-        cow += 1
-    elif list2[0] == list[1] or list2[0] == list[2] or list2[0] == list[3]:
-        bull += 1
-    elif list2[1] == list1[1]:
-        cow += 1
-    elif list2[1] == list[0] or list2[1] == list[2] or list2[1] == list[3]:
-        bull += 1
-    elif list2[2] == list1[2]:
-        cow += 1
-    elif list2[2] == list[0] or list2[2] == list[1] or list2[2] == list[3]:
-        bull += 1
-    elif list2[3] == list1[3]:
-        cow += 1
-    elif list2[3] == list[0] or list2[3] == list[1] or list2[3] == list[2]:
-        bull += 1
-    print(cow)
-    print(bull)
+    result = []
+    for i in range(len(list2)):
+        if list2[i] == list1[i]:
+            cow += 1
+            result.append(list2[i])
+        elif list2[i] in list1:
+            bull += 1
+            result.append("X")
+        else:
+            result.append("X")
+    print(f"You hit: {len(result)-result.count('X')} numbers are on the right place {result} and {bull} numbers are not at the correct place")
+    print(f"cow = {cow}")
+    print(f"bull = {bull}")
 
-#game("1234", "4567")
-
-
+is_in_number(['1', '2', '3', '4'], ['6', '2', '3', '1'])
 
 
