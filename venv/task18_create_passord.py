@@ -10,7 +10,6 @@ random_4digit = str(random.randint(1000, 9999))
 user_number = str(1234)
 
 
-"""
 def game(x,y):
     split_numbers(x, y)
     is_in_number(x,y)
@@ -27,7 +26,7 @@ def split_numbers(number_1,number_2): # it works correctly
     return number_1_list, number_2_list
 
 # nie wiem jak pobrać dane ze zwróconej tupli (number_1_list, number_2_list)
-"""
+
 #number_1_list = ['1', '2', '3', '4']
 #number_2_list = ['6', '2', '3', '1']
 
@@ -54,8 +53,8 @@ def is_in_number(number_1_list,number_2_list):
 def extra_hits():
     x = input("Do you want to take another chance? Y/N...")
     if x == "Y" or x == "y":
-        input("Please enter your number again")
-        #...
+        input("Please enter your number again: ")
+#???        is_in_number(number_1_list, number_2_list)
     elif x == "N" or x == "n":
         print("Thank you for your game")
     else:
